@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "../scss/style2.css",
+	"sources": [
+		"../scss/style2.scss",
+		"../scss/variables2.scss",
+		"../scss/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"variables2\";\r\n@import \"main\";",
+		"$bodyFont: normal 12px/18px Arial, Helvetica, sans-serif;\r\n$bodyBackground: #DDBC9B;\r\n$contentBackground: #fff;\r\n ",
+		"body {\r\n\tmargin: 0 auto;\r\n\twidth: 1180px;\r\n\tpadding-top: 16px;\r\n\tbackground: $bodyBackground;\r\n\r\n\t> #content {\r\n\t\tmargin: 0 auto;\r\n\t\twidth: 1020px;\r\n\t\tbackground: $contentBackground;\r\n\t\tpadding: 48px 60px 70px 60px;\r\n\t\r\n\t\t> h1 {\r\n\t\t\tfont-size: 34px;\r\n\t\t}\r\n\r\n\t\t> p {\r\n\t\t\tfont: $bodyFont;\r\n\t\t}\r\n\r\n\t\t> h2 {\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t}\r\n\t}\r\n}\r\n\r\n"
+	],
+	"mappings": ";AEAA,AAAA,IAAI,CAAC;EACJ,MAAM,EAAE,MAAO;EACf,KAAK,EAAE,MAAO;EACd,WAAW,EAAE,IAAK;EAClB,UAAU,EDHM,OAAO;CCwBvB;;;AAzBD,AAMG,IANC,GAMD,QAAQ,CAAC;EACV,MAAM,EAAE,MAAO;EACf,KAAK,EAAE,MAAO;EACd,UAAU,EDPQ,IAAI;ECQtB,OAAO,EAAE,mBAAoB;CAc7B;;;AAxBF,AAYI,IAZA,GAMD,QAAQ,GAMP,EAAE,CAAC;EACJ,SAAS,EAAE,IAAK;CAChB;;;AAdH,AAgBI,IAhBA,GAMD,QAAQ,GAUP,CAAC,CAAC;EACH,IAAI,EDjBI,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,EAAE,SAAS,EAAE,UAAU;CCkBrD",
+	"names": []
+}
