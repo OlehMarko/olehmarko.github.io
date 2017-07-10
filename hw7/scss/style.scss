@@ -1,0 +1,96 @@
+$blue:   #2A74BF;
+$red:    #D7514C;
+$green:  #4D944B;
+$orange: #D8C11D;
+$grey:   #666;
+$white: #fff;
+
+h1,h2 {
+  color: $blue;
+  font-weight: bold;
+}
+
+nav:first-child {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+#active {
+  color: $white;
+  background-color: $blue;
+}
+
+.page-header {
+  margin-top: 0;
+  border-color: $blue;
+}
+
+.related-class {
+  border: 1px solid;
+
+  > a {
+    text-decoration: none;
+  }
+}
+
+.cardio {
+  border-color: $red;
+  background-color: $red;
+}
+
+.fitness {
+  border-color: $blue;
+  background-color: $blue;
+}
+
+.zumba {
+  border-color: $orange;
+  background-color: $orange;
+}
+
+.bootcamp {
+  border-color: $green;
+   background-color: $green;
+}
+
+.related-class-caption {
+  height: 40px;
+  font-weight: bold;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > p {
+    margin-bottom: 0;
+    }
+}
+
+footer {
+  margin-top: 40px;
+  height: 40px;
+  background-color: $grey;
+  display: flex;
+  align-items: center;
+
+  > span {
+    font-weight: bold;
+    margin-left: 20px;
+    color: $white;
+  }
+}
+
+.is-high {
+  @media screen and (max-width: 992px) {
+    margin-bottom: 20px;
+  }
+}
+
+.img-responsive {
+  @media  (max-width: 992px) and (min-width: 762px) {
+    width: 100%;
+  }
+}
