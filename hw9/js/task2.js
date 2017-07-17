@@ -12,7 +12,6 @@ if (agreement === false) {
     } else {
       var randomNumber = Math.round(Math.random() * 5) * multiplierRandomNumber;
     }
-    console.log(randomNumber);
 
     for (let i = 0; i < 3; i++) {
       var userNumber = +prompt(`Введіть число від 0 до ${5 * multiplierRandomNumber }`);
