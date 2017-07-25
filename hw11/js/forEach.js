@@ -1,7 +1,7 @@
 function forEach(el, fn) {
-    for (let i = 0; i < el.length; i++) {
-        fn(el[i]);
-    }
+  for (var i = 0; i < el.length; i++) {
+    fn(el[i]);
+  }
 };
 
 
