@@ -1,5 +1,5 @@
 function getTransformedArray(arr, fn) {
-  let transformedArray = [];
+  var transformedArray = [];
   forEach(arr, function(el) {
     transformedArray.push(fn(el));
   });
