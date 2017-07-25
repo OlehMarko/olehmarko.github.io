@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <textarea name="" id="myTextAres" cols="30" rows="10"></textarea>
+    <button onclick="getDataFromTextArea()">Submit</button>
+    <script>
+        var users;
+        function getDataFromTextArea() {
+            users = JSON.parse(document.getElementById('myTextAres').value);
+            console.log(users);
+            console.log(maleOrFemale(users));
+            console.log(favoriteColor(users));
+            console.log(numberOfColors(users));
+            console.log(mostFavoriteColor(users));
+            console.log(notUniqueName(users));
+
+        }
+
+        function maleOrFemale(arr) {
+          var stat = {};
+          stat.male = 0;
+          stat.female = 0;
+          for (let i = 0; i < arr.length; i++) {
+              if (arr[i].gender === "Male") {
+                stat.male += 1;
+              } else if (arr[i].gender === "Female"){
+                stat.female += 1;
+              }
+          }
+          return stat;
+        }
+
+        function favoriteColor(arr){
+          var obj = {};
+          for (let i = 0; i < arr.length; i++) {
+            if (!obj.hasOwnProperty(arr[i].favorite_color)) {
+              obj[arr[i].favorite_color] = 1;
+            } else {
+              obj[arr[i].favorite_color]++;
+            }
+          }
+
+          var number = 0;
+          for (let key in obj) {
+            if (obj.key === 1)
+            number++;
+          }
+          return number;
+        }
+
+        function numberOfColors(arr) {
+          var obj = {};
+          for (let i = 0; i < arr.length; i++) {
+            if (!obj.hasOwnProperty(arr[i].favorite_color)) {
+              obj[arr[i].favorite_color] = 1;
+            } else {
+              obj[arr[i].favorite_color]++;
+            }
+          }
+          return obj;
+        }
+
+        function mostFavoriteColor(arr) {
+          var obj = {};
+          for (let i = 0; i < arr.length; i++) {
+            if (!obj.hasOwnProperty(arr[i].favorite_color)) {
+              obj[arr[i].favorite_color] = 1;
+            } else {
+              obj[arr[i].favorite_color]++;
+            }
+          }
+
+          var mostfavorite = 0;
+          var color = '';
+          for (var key in obj) {
+            if (obj[key] > mostfavorite) {
+              mostfavorite = obj[key];
+              color = key;
+            }
+          }
+          return color;
+        }
+
+        function notUniqueName(arr) {
+          var obj = {};
+          for (let i = 0; i < arr.length; i++) {
+            if (!obj.hasOwnProperty(arr[i].first_name)) {
+              obj[arr[i].first_name] = 1;
+            } else {
+              obj[arr[i].first_name]++;
+            }
+          }
+
+          var notUniqueNames = [];
+          for (var key in obj) {
+            if (obj[key] > 1) {
+              notUniqueNames.push(key);
+          }
+        }
+        return notUniqueNames;
+      }
+
+
+
+    </script>
+    <script src="task2.js" charset="utf-8"></script>
+</body>
+</html>
