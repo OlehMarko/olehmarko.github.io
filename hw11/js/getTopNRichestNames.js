@@ -32,5 +32,5 @@ var people = [
   {name: 'Kara', income: '16M'},
   {name: 'Zara', income: '29K'}
  ];
-console.log(getTopNRichestNames(2, people)); // -> [ 'Dara', 'Bara' ]
-console.log(getTopNRichestNames(100, people)); // -> [ 'Dara', 'Bara', ‘Kara’, ‘Zara’ ]
+console.log(getTopNRichestNames(2, people));
+console.log(getTopNRichestNames(100, people)); 
