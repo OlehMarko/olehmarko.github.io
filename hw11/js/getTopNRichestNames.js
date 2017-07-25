@@ -11,7 +11,7 @@ function getTopNRichestNames(number, people) {
       person.money = money * 1e3;
     }
     });
-    console.log(people);
+
     people.sort(function (a, b) {
     if (a.money < b.money) {
       return 1;
@@ -21,7 +21,7 @@ function getTopNRichestNames(number, people) {
     }
     return 0;
     });
-    console.log(people);
+
     var slicedPeople = people.slice(0, number);
     return pluckByAttribute(slicedPeople, 'name');
   }
