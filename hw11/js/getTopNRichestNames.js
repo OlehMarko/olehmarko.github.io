@@ -1,14 +1,17 @@
 function getTopNRichestNames(number, people) {
   people.map(function(person) {
+
     var money = parseInt(person.income);
-    if (person.income[1] === 'B') {
+    var positionOfIndex = person.income.length - 1;
+    if (person.income[positionOfIndex] === 'B') {
       person.money = money * 1e9;
-    } else if (person.income[1] === 'M') {
+    } else if (person.income[positionOfIndex] === 'M') {
       person.money = money * 1e6;
-    } else if (person.income[1] === 'K') {
+    } else if (person.income[positionOfIndex] === 'K') {
       person.money = money * 1e3;
     }
     });
+    console.log(people);
     people.sort(function (a, b) {
     if (a.money < b.money) {
       return 1;
@@ -18,15 +21,16 @@ function getTopNRichestNames(number, people) {
     }
     return 0;
     });
+    console.log(people);
     var slicedPeople = people.slice(0, number);
     return pluckByAttribute(slicedPeople, 'name');
   }
 
 var people = [
-  {name: 'Bara', income: '1B'},
-  {name: 'Dara', income: '5B'},
-  {name: 'Kara', income: '1M'},
-  {name: 'Zara', income: '2K'}
+  {name: 'Bara', income: '13B'},
+  {name: 'Dara', income: '56B'},
+  {name: 'Kara', income: '16M'},
+  {name: 'Zara', income: '29K'}
  ];
 console.log(getTopNRichestNames(2, people)); // -> [ 'Dara', 'Bara' ]
 console.log(getTopNRichestNames(100, people)); // -> [ 'Dara', 'Bara', ‘Kara’, ‘Zara’ ]
