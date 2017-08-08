@@ -145,6 +145,5 @@ Monster.prototype.fight = function(target) {
 module.exports = {
   Champion: Champion,
   Monster: Monster,
-  extend: extend,
-  inherit: inherit
+  extend: extend
 }
