@@ -293,6 +293,7 @@
   var nameAlt = false;
   var emailAlt = false;
   var skillsAlt = false;
+  var profilePictureAlt = false;
 
   headers[0].addEventListener('click', function() {
     changeIcon(nameAlt, 0);
@@ -300,12 +301,17 @@
     nameAlt = !nameAlt;
   });
   headers[1].addEventListener('click', function() {
-    changeIcon(nameAlt, 1);
+    changeIcon(emailAlt, 1);
     sortTable('email', 1, emailAlt);
     emailAlt = !emailAlt;
   });
+  headers[2].addEventListener('click', function() {
+    changeIcon(profilePictureAlt, 2);
+    sortTable('profilePicture', 0, profilePictureAlt);
+    profilePictureAlt = !profilePictureAlt;
+  });
   headers[3].addEventListener('click', function() {
-    changeIcon(nameAlt, 3);
+    changeIcon(skillsAlt, 3);
     sortTable('skills', 3, skillsAlt);
     skillsAlt = !skillsAlt;
   });
@@ -332,7 +338,7 @@
     } else {
       var one = -1;
     }
-    if (propertyName == 'name') {
+    if (propertyName == 'name' || propertyName == 'profilePicture') {
       newStudents.sort(function(a, b) {
         if (a.name > b.name) return one;
         if (a.name < b.name) return -one;
@@ -413,9 +419,9 @@
           return false;
         };
       }
-      if (key == 'Skils') {
-        let reg = /[^,]*/;
-        if (!reg.test(student[key])) {
+      if (key == 'skills') {
+        let re = /(\d+)(,\s*\d+)*/;
+        if (!re.test(student[key])) {
           return false;
         };
       }
