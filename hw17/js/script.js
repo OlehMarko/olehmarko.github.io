@@ -401,7 +401,6 @@
       trashes[i].onclick = function() {
         newStudents.splice(i, 1);
         tbody.removeChild(event.target.parentNode.parentNode);
-        console.log(newStudents);
       }
     }
   }
