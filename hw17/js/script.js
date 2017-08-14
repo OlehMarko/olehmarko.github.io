@@ -386,7 +386,7 @@
     for (let i = 0; i < edits.length; i++) {
       edits[i].onclick = function() {
         document.getElementsByName('Student')[0].value = newStudents[i].name;
-        document.getElementsByName('email')[0].value = newStudents[i].email;
+        document.getElementsByName('Email')[0].value = newStudents[i].email;
         document.getElementsByName('Profile picture')[0].value = newStudents[i].profilePicture;
         document.getElementsByName('Skils')[0].value = newStudents[i].skills;
         newStudents.splice(this.rowIndex - 1, 1);
