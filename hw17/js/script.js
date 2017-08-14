@@ -388,7 +388,7 @@
         document.getElementsByName('Student')[0].value = newStudents[i].name;
         document.getElementsByName('Email')[0].value = newStudents[i].email;
         document.getElementsByName('Profile picture')[0].value = newStudents[i].profilePicture;
-        document.getElementsByName('Skils')[0].value = newStudents[i].skills;
+        document.getElementsByName('Skills')[0].value = newStudents[i].skills;
         newStudents.splice(this.rowIndex - 1, 1);
         tbody.removeChild(event.target.parentNode.parentNode);
       }
