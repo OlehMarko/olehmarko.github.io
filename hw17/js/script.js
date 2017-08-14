@@ -414,16 +414,18 @@
   function validate(student) {
     for (let key in student) {
       if (key == 'email') {
+
         let re = /\S+@\S+\.\S+/;
         if (!re.test(student[key])) {
+          console.log('mail');
           return false;
-        };
+        }
       }
       if (key == 'skills') {
-        let re = /(\d+)(,\s*\d+)*/;
-        if (!re.test(student[key])) {
+        var check = student[key].split(',');
+        if (check.length === 1) {
           return false;
-        };
+        }
       }
       if (student[key] == '') {
         return false;
