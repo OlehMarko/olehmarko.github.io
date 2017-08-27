@@ -40,15 +40,70 @@ document.getElementsByTagName('head')[0].appendChild(script);
 function parse(data) {
    console.log(data);
 }
-// var myHeaders = new Headers();
-//
-// var myInit = { method: 'GET',
-//                headers: myHeaders,
-//                mode: 'cors',
-//                cache: 'default' };
+function addScript(src) {
+  if (document.getElementsByClassName('jsonp')[0]) {
+    document.head.removeChild(document.getElementsByClassName('jsonp')[0]);
+  }
+  var elem = document.createElement("script");
+  elem.src = src;
+  document.head.appendChild(elem);
+  elem.classList.add('jsonp');
+}
 
-// fetch('http://marsweather.ingenology.com/v1/latest/?format=json').then(function(response) {
-//   return response.json();
-// }).then(function(returnedValue) {
-//   console.log(returnedValue);;
-// })
+addScript('http://marsweather.ingenology.com/v1/latest/?format=jsonp&callback=parse');
+let requestCount = 0;
+function parse(data) {
+
+  let requiredData = {};
+  if (data.report) {
+    requiredData.temperature = (data.report.min_temp + data.report.max_temp) / 2;
+    requiredData.windPower = data.report.wind_speed || "information unavaible";
+    requiredData.windDirection = (data.report.wind_direction !== '--') ? data.report.wind_direction : "information unavaible";
+    showWeather(requiredData);
+  } else {
+    let indexOfResults = (requestCount % 10 === 0) ? 9 : requestCount % 10 - 1;
+    console.log(indexOfResults);
+    requiredData.temperature = (data.results[indexOfResults].min_temp + data.results[indexOfResults].max_temp) / 2;
+    requiredData.windPower = data.results[indexOfResults].wind_speed || "information unavaible";
+    requiredData.windDirection = (data.results[indexOfResults].wind_direction !== '--') ? data.results[indexOfResults].wind_direction : "information unavaible";
+    console.log(requiredData);
+    showWeather(requiredData);
+  }
+}
+
+function showWeather(data) {
+  let container = document.getElementsByClassName('container')[0];
+
+  let temperatureContainer = document.getElementsByClassName('temperature')[0];
+  let temperature = `Temperature: ${data.temperature}`;
+  temperatureContainer.innerHTML = temperature;
+
+  let windPowerContainer = document.getElementsByClassName('power')[0];
+  let windPower = `Wind power: ${data.windPower}`;
+  windPowerContainer.innerHTML = windPower;
+
+  let windDirectionContainer = document.getElementsByClassName('direction')[0];
+  let windDirection = `Wind direction: ${data.windDirection}`;
+  windDirectionContainer.innerHTML= windDirection;
+
+}
+
+let previous = document.getElementsByClassName('previous')[0];
+let next = document.getElementsByClassName('next')[0];
+
+previous.onclick = function () {
+    requestCount++;
+    console.log(requestCount);
+    let page = Math.ceil(requestCount / 10);
+    addScript(`http://marsweather.ingenology.com/v1/archive/?page=${page}&format=jsonp&callback=parse`);
+}
+
+next.onclick = function () {
+  if (requestCount === 0) {
+    addScript('http://marsweather.ingenology.com/v1/latest/?format=jsonp&callback=parse');
+  } else {
+    requestCount--;
+    let page = Math.ceil(requestCount / 10);
+    addScript(`http://marsweather.ingenology.com/v1/archive/?page=${page}&format=jsonp&callback=parse`);
+  }
+}
