@@ -16,6 +16,13 @@ getAstros
   }, function(error) {
 	console.log(err);
   });
+let script = document.createElement("script");
+script.setAttribute("src", 'http://marsweather.ingenology.com/v1/latest/?format=jsonp&callback=parse');
+document.getElementsByTagName('head')[0].appendChild(script);
+
+function parse(data) {
+   console.log(data);
+}
 // var myHeaders = new Headers();
 //
 // var myInit = { method: 'GET',
