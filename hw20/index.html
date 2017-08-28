@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div id="details">
+    <div class="time">
+      <div>TIME</div>
+      <img src="img/time.svg" alt="time">
+      <span id="timer"><time>00:00</time></span>
+    </div>
+    <div class="steps">
+      <div>STEPS</div>
+      <img src="img/steps.svg" alt="steps">
+      <span id="step-counter">0</span>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="index.js" charset="utf-8"></script>
+  <div id="game_object"></div>
+  <div id="game" class="button"><span>NEW GAME</span></div>
+  <div id="win" class="button"><span>WIN</span></div>
+</body>
+</html>
