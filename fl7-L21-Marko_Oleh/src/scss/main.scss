@@ -1,0 +1,26 @@
+@import './variables';
+
+table {
+	width: $tableWidth;
+	font: $bodyFont;
+	color: $textColor;
+
+	> caption {
+		text-align: right;
+		font-size: 15px;
+		font-style: italic;
+		}
+
+	tr th {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: $theadBackground;
+		border-right: $theadBorderRifgt;
+	}
+
+	tr td {
+		background-color: $tbodyBackground;
+		border-bottom: 1px solid $theadBackground;
+		padding: 10px;
+	}
+}
