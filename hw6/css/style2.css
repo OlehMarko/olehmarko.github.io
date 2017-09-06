@@ -1,0 +1,94 @@
+body {
+  margin: 0 auto;
+  width: 1180px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: #659A01;
+}
+
+#content {
+  margin: 0 auto;
+  width: 1020px;
+  background: #666701;
+  padding: 25px 30px 35px 30px;
+}
+
+#content h1 {
+  font: bold 34px Georgia, "Times New Roman", Times, serif;
+  color: #f1c100;
+  margin-bottom: 30px;
+}
+
+#content > p {
+  font: normal 15px/20px Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  line-height: 21px;
+  margin-bottom: 20px;
+}
+
+#content > h2 {
+  font: italic 28px Georgia, "Times New Roman", Times, serif;
+  color: #ffcf0b;
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+
+#content img {
+  padding: 6px;
+  border: 2px solid #fff;
+}
+
+#content > .brief {
+  display: block;
+  width: auto;
+  height: auto;
+  font: normal 15px/20px Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  background-color: #677d01;
+  padding: 20px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  float: none;
+  color: #fff;
+}
+
+#content a {
+  font: normal 15px/20px Georgia, "Times New Roman", Times, serif;
+  color: #f1c100;
+}
+
+table {
+  width: 960px;
+  font: normal 15px/20px Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+}
+
+table > caption {
+  text-align: right;
+  font-size: 15px;
+  font-style: italic;
+}
+
+table tr th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #94a34e;
+  border-right: none;
+}
+
+table tr td {
+  background-color: #677d01;
+  border-bottom: 1px solid #94a34e;
+  padding: 10px;
+}
+
+.img-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.img-right {
+  float: right;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,82 @@
+h1, h2 {
+  color: #2A74BF;
+  font-weight: bold; }
+
+nav:first-child {
+  margin: 0; }
+
+.no-padding {
+  padding: 0; }
+
+#active {
+  color: #fff;
+  background-color: #2A74BF; }
+
+.page-header {
+  margin-top: 0;
+  border-color: #2A74BF; }
+
+.related-class {
+  border: 1px solid; }
+  .related-class > a {
+    text-decoration: none; }
+
+.cardio {
+  border-color: #D7514C;
+  background-color: #D7514C; }
+
+.fitness {
+  border-color: #2A74BF;
+  background-color: #2A74BF; }
+
+.zumba {
+  border-color: #D8C11D;
+  background-color: #D8C11D; }
+
+.bootcamp {
+  border-color: #4D944B;
+  background-color: #4D944B; }
+
+.related-class-caption {
+  height: 40px;
+  font-weight: bold;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .related-class-caption > p {
+    margin-bottom: 0; }
+
+footer {
+  margin-top: 40px;
+  height: 40px;
+  background-color: #666;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  footer > span {
+    font-weight: bold;
+    margin-left: 20px;
+    color: #fff; }
+
+@media screen and (max-width: 992px) {
+  .is-high {
+    margin-bottom: 20px; } }
+
+@media (max-width: 992px) and (min-width: 762px) {
+  .img-responsive {
+    width: 100%; } }

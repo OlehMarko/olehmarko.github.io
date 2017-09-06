@@ -1,0 +1,94 @@
+body {
+	margin: 0 auto;
+	width: 1180px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: $bodyBackground;
+}
+
+ #content {
+	margin: 0 auto;
+	width: 1020px;
+	background: $contentBackground;
+	padding: 25px 30px 35px 30px;
+	
+	 h1 {
+		font: $h1Font;
+		color: $h1Color;
+		margin-bottom: 30px;
+	}
+
+	& > p {
+		font: $bodyFont;
+		color: $textColor;
+		line-height: 21px;
+		margin-bottom: 20px;
+	}
+
+	& > h2 {
+		font: $h2Font;
+		color: $h2Color;
+		margin-bottom: 16px;
+		margin-top: 40px;
+	}
+
+	img {
+		padding: 6px;
+		border: 2px solid $borderColor;
+	}
+
+	& > .brief {
+		display: block;
+		width: $briefWidth;
+		height: $briefHeight;
+		font: $bodyFont;
+		font-style: italic;
+		background-color: $briefBackground;
+		padding: 20px;
+		margin-right: $briefRightMargin;
+		margin-bottom: 20px;
+		float: $briefFloat;
+		color: $briefTextColor;
+	}
+
+	a {
+		font: $bodyFont;
+		color: $aColor;
+	}
+}
+
+table {
+	width: $tableWidth;
+	font: $bodyFont;
+	color: $textColor;
+			
+	> caption {
+		text-align: right;
+		font-size: 15px;
+		font-style: italic;
+		}
+
+	tr th {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: $theadBackground;
+		border-right: $theadBorderRifgt;
+	}
+
+	tr td {
+		background-color: $tbodyBackground;
+		border-bottom: 1px solid $theadBackground;
+		padding: 10px;
+	}
+} 
+
+.img-left {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+
+.img-right {
+	float: right;
+	margin-bottom: 20px;
+}
