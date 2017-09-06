@@ -1,0 +1,20 @@
+.container {
+  margin: 0 auto;
+  padding-top: 150px;
+  text-align: center;
+  color: white;
+  width: 600px;
+  height: 400px;
+  background-image: url('http://www.thetwocities.com/wp-content/uploads/2016/10/high-mars-10.jpg');
+}
+
+#myProgress {
+  margin: 0 auto;
+  width: 200px;
+  background-color: #f4e5e5;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #9c7272;
+}
