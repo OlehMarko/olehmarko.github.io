@@ -1,0 +1,124 @@
+body {
+    padding: 20px;
+    font: normal 14px/1.2 Arial, sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+
+/**************/
+/* Names list */
+.names {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 300px;
+    float: left;
+    margin-right: 2px;
+}
+.names li {
+    background: #00BCD4;
+    margin: 0 0 1px 0;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+}
+
+/***************/
+/* Scores list */
+.scores {
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    margin-right: 30px;
+}
+.scores li {
+    margin: 0 0 1px 0;
+    padding: 10px 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    background: #727272;
+    text-align: center;
+}
+.scores span {
+    pointer-events: none;
+}
+.score-input {
+    width: 20px;
+    height: 9px;
+    text-align: center;
+}
+
+/***********/
+/* Profile */
+.profile {
+    float: left;
+    width: 200px;
+    background: #448AFF;
+    padding: 0 10px;
+    text-align: center;
+}
+.profile img {
+    display: block;
+    margin: 10px auto 10px;
+}
+.profile h3 {
+    margin: 0 0 10px;
+}
+
+/***********/
+/*Arrows*/
+.arrows {
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+.arrows li {
+    height: 36px;
+    margin: 0 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    background: #b2fbe2;
+    text-align: center;
+}
+
+.arrow-up {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  padding-top: 7px;
+  margin-bottom: 2px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #448AFF;
+
+}
+
+.arrow-down {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-top: 10px solid #448AFF;
+}
+/***********/
+/*Brief info*/
+
+.name {
+  font-weight: bold;
+}
