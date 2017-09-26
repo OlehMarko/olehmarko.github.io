@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="img-wrapper">
+        <img src="{{ photo }}" ui-sref="detail({ student: name })">
+    </div>
+    <div class="name"><span ng-show="!show">{{ name }} {{ surname }}</span></div>
+    <div class="input-wrap" ng-show="show">
+        <input ng-model="name">
+        <input ng-model="surname">
+    </div>
+    <button class="edit" ng-show="!show" ng-click="show=!show">Edit</button>
+    <button class="edit" ng-show="show" ng-click="show=!show">Save</button>
+</div>
